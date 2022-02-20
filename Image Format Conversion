@@ -1,0 +1,11 @@
+from PIL import Image
+import os
+
+for i in os.listdir():
+    print(i)
+    if i == "Image.py":
+        pass
+    else:
+        img = Image.open(i)
+        name = "Image {fname}.jpg".format(fname=i)
+        img.save(name)
